@@ -10,73 +10,96 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap"
+      rel="stylesheet"
+    />
     <title>login-page</title>
   </head>
   <body>
     <div class="contain">
       <nav>
-          <div class="logo">
-            <a href="../index.html"><img src="../assets/images/Nano Icon 1.png" alt="hm"></a>
-          
-            <a href="../index.html"><h2>NANOCODES PROGRAMMING</h2></a>
-        </div>
-         
-          <ul class="navlinks">
-            
-           <li><a href="index.html">LEARN ONLINE</a></li>
-           <li><a href="#">SERVICES</a>
-               <ul>
-                   <li><a href="#">WEB DESIGN AND DEVELOPMENT</a></li>
-                   <li><a href="#">APP CREATION</a></li>
-                   <li><a href="#">UI/UX DESIGN</a></li>
-                   <li><a href="#">ARTIFICIAL INTELLIGENCE</a></li>
-                  
-               </ul>
-           </li>
-           <li><a href="ecommerce.html">SHOP ONLINE</a></li>
-           <li><a href="">TUTORIALS</a><ul>
-            <li><a href="#">WEB DESIGN AND DEVELOPMENT</a></li>
-            <li><a href="#">APP CREATION</a></li>
-            <li><a href="#">UI/UX DESIGN</a></li>
-            <li><a href="#">ARTIFICIAL INTELLIGENCE</a></li>
-           
-        </ul>
-            </li>
-           <li><a href="#">CONTACT</a>
-          </li>
-          
-           <li><a href="#">BUY/SELL CRYPTO</a></li>
-           
-               
-           </li>
-          </ul>
-          <div  class="burger" onclick="toggler()">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-          </div>
-        </nav>
-      <!-- endof navigation bar -->
-      <div class="form">
-        <form action="#" class="myform">
-         <ul class="form-element">
-             <li>sign up</li>
-             <li>sign in</li>
-         </ul>
-          <div class="input-element">
-            <input type="email" name="username"  class="user"/><p id="error"></p><br>
-            <input type="password" name="userpasskey" class="passkey"/> <p id="passerror"></p> <br>
-            <p><a href="#">forgot password?</a> </p>
-            <!-- <input type="checkbox" name="" id="" value="i agree"/><label for="">i agree with the terms and conditions </label> -->
-          </div>
-          <div class="buttonpa">
-            <button type="submit">sign in</button>
-          </div>
-         
-        </form>
-          <img src="../assets/images/login page art.png" alt="" class="image-class" />
+        <div class="logo">
+          <a href="../index.html"><img src="../assets/images/Nano Icon 1.png" alt="hm"></a>
+        
+        <a href="../index.html"><h2>NANOCODES PROGRAMMING</h2></a>
       </div>
+
+      
+       
+        <ul class="navlinks">
+            
+         
+         <li><a href="#go-down">GET STARTED</a></li>
+         <li><a href="../ecommerce.html">SHOP ONLINE</a></li>
+         <li><a href="#mine">SERVICES</a>
+         </li>
+         <li><a href="#">LEARN ONLINE</a>
+          <ul>
+            <li><a href="login.html">LOGIN</a></li>
+            <li><a href="sign up.html">SIGN UP</a></li>
+        </ul></li>
+         
+         <li><a href="../about.html">ABOUT US</a></li>
+         <li><a href="#">contact us </a></li>
+         
+             
+         </li>
+        </ul>
+        <button type="button" class="toggler">
+            <span></span>
+            
+        </button>
+       
+      </nav>
+      <!-- endof navigation bar -->
+      <div class="contin">
+        <div class="able">
+          <div class="bg33">
+            <h1>NANOCODES <br>CODES</h1>
+            <p class="jk">Explore the worlds <br> leading <br> tech <br> institute 
+            <p class="ty">connect with us on</p>
+            <div class="icly">
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+            <i class="fa fa-google-plus" aria-hidden="true"></i>
+          </div>
+          </div>
+          <div class="login">
+            <form action="">
+              <ul class="a">
+                <li><a href="login.html">LOGIN</a></li>
+                <li><a href="sign up.html">SIGN UP</a></li>
+              </ul>
+              <input class="men" type="name" placeholder="Name">
+              <!-- <input class="men" type="email" placeholder="email"> -->
+              <input class="men" type="password" placeholder="Password">
+             <br> <button class="last">Log in</button>
+            </form>
+          </div>
+        </div>
+     </div>
     </div>
     <script src="login.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 300,
+        duration: 1000,
+      });
+    </script>
   </body>
 </html>

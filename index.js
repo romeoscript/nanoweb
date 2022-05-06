@@ -33,14 +33,17 @@ count.addEventListener("scroll", updated);
 // }
 
 // the navigation bar
-const burger = document.querySelector(".burger");
-const navLinks = document.querySelector(".navlinks");
+const toggler = document.querySelector(".toggler")
+const navLinks = document.querySelector(".navlinks")
 
-function toggler() {
-  if (navLinks.style.display === "block") {
-    navLinks.style.display = "none";
-  } else {
-    navLinks.style.display = "block";
+
+function navToggle() {
+    if (navLinks.style.display === "block") {
+      navLinks.style.display = "none";
+    } else {
+      navLinks.style.display = "block";
+    }
+    console.log(navLinks);
   }
-  console.log(navLinks);
-}
+  
+  toggler.addEventListener('click',navToggle)

@@ -3,7 +3,10 @@ body {
   text-align: center;
   overflow-x: hidden;
 }
-
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
 * {
   margin: 0;
   padding: 0;
@@ -31,7 +34,7 @@ nav {
   margin-bottom: 20px;
   position: fixed;
   z-index: 1;
-
+  max-width: 100vw;
 }
 
 @keyframes navloader {
@@ -55,41 +58,41 @@ nav h2 {
   font-size: 18px;
   text-decoration: none;
 }
- nav  a{
-   text-decoration: none;
-   color: black;
- }
+nav a {
+  text-decoration: none;
+  color: black;
+}
 nav ul {
   display: flex;
   justify-content: flex-end;
   max-width: 1200px;
   width: 0 auto;
   pad: 0;
+  transition: 4s ease-in;
 }
 nav ul li {
   list-style-type: none;
   position: relative;
   padding: 10px 15px;
   animation-name: navlink;
-animation-duration: 500ms;
-animation-timing-function: ease-in;
-animation-delay: 500ms;
+  animation-duration: 500ms;
+  animation-timing-function: ease-in;
+  animation-delay: 500ms;
 }
-
 
 @keyframes navlink {
-0% {
-  transform: scale(0);
-}
-90% {
-  transform: scale(1.1);
-}
-100% {
-  transform: scale(1);
-}
+  0% {
+    transform: scale(0);
+  }
+  90% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 nav ul li:hover {
-  border-bottom: 2px solid rgb(236, 102, 225);
+  border-bottom: 2px solid rgb(122, 102, 236);
   background-color: rgb(250, 246, 250);
 }
 nav ul li a {
@@ -99,29 +102,61 @@ nav ul li a {
 }
 nav ul li ul {
   position: absolute;
-  background: #f0b3f5;
+  background: blue;
   top: 35px;
+  color: white;
   display: block;
   left: 0;
   width: 150px;
   visibility: hidden;
 }
+nav ul li ul li a{
+    color: white;
+}
+nav ul li ul li :hover{
+    color: blue;
+}
 nav ul li:hover ul {
   visibility: visible;
 }
-.burger {
-  /* background-color: black; */
-  padding: 10px;
-  display: none;
-  cursor: pointer;
+.toggler{
+   height: 34px;
+   width: 44px;
+   cursor: pointer;
+   border-radius: 4px;
+   background-color: rgb(163, 154, 154);
+   border: none;
+   display: none;
 }
- .burger div {
-  width: 25px;
-  height: 3px;
-  background-color: black;
-  margin: 5px;
-  border-radius: 5px;
+.toggler:focus{
+   outline: none;
+   backdrop-filter: blur;
 }
+.toggler span{
+   display: block;
+   background-color: white;
+   height: 2px;
+   width: 20px;
+   margin: auto;
+   position: relative;
+}
+.toggler span::before,
+.toggler span::after{
+   content: '';
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgb(255, 255, 255);
+}
+.toggler span::before{
+   transform: translateY(-6px);
+}
+.toggler span::after{
+  transform: translateY(6px);
+}
+
 
 /* wrapper */
 
@@ -156,15 +191,16 @@ nav ul li:hover ul {
   text-transform: capitalize;
 }
 .wrapper button {
-  width: 251px;
+  /* width: 251px;
   height: 72px;
   left: 141px;
   top: 712px;
-  color: white;
+  color: white; */
   background: #040a99;
   border-radius: 44px;
-  padding-inline-end: 10px;
+  /* padding-inline-end: 10px; */
   border: none;
+  padding: 20px 50px;
 
   font-size: 20px;
   text-transform: capitalize;
@@ -189,7 +225,7 @@ nav ul li:hover ul {
     transform: scale(1.1);
   }
 }
-.wrapper button  a{
+.wrapper button a {
   text-decoration: none;
   color: white;
 }
@@ -205,6 +241,7 @@ nav ul li:hover ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
 .box-model {
@@ -215,7 +252,7 @@ nav ul li:hover ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 70%;
+  width: 90%;
   margin: 70px 10px;
 }
 .box-model hr {
@@ -234,6 +271,7 @@ nav ul li:hover ul {
   padding: 5px;
   text-transform: uppercase;
 }
+
 .boxes p {
   background-color: #04096a;
   color: white;
@@ -273,7 +311,7 @@ nav ul li:hover ul {
 .who-we-are p {
   line-height: 25px;
   font-size: 20px;
-  text-align: justify;
+  text-align: left;
   margin: 10px 40px;
   color: #bcbcbc;
 }
@@ -281,11 +319,14 @@ nav ul li:hover ul {
   display: flex;
   justify-content: space-around;
 }
+.more-description img{
+  width: 30vw;
+}
 .more-description .text {
   width: 35%;
   font-size: 20px;
   color: #bcbcbc;
-  text-align: justify;
+  text-align: left;
 }
 .boxmode-mom {
   display: flex;
@@ -304,13 +345,38 @@ nav ul li:hover ul {
   text-transform: capitalize;
   font-size: 20px;
 }
-.boxes {
+
+.boxes{
   max-width: 250px;
   margin: auto;
+  position: relative;
+  cursor: pointer;
 }
 .boximage {
+  transition: .5s ease;
   width: 250px;
+
 }
+
+.boxes h2{
+  position: absolute;
+  top: 20%;
+  left: 7%;
+  right: 7%;
+  color: white;
+  font-size: 12px;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  opacity: 0;
+}
+
+.boxes:hover h2 {
+  opacity: 1;
+}
+.boxes:hover .boximage{
+  opacity: 0.3;
+}
+
 .boxes p {
   margin-bottom: 30px;
   text-justify: auto;
@@ -419,7 +485,7 @@ footer .chose {
   display: flex;
   flex-wrap: wrap;
 }
-footer .chose div img{
+footer .chose div img {
   height: 50%;
   width: 50%;
 }
@@ -449,8 +515,8 @@ footer .client .clients p a {
   text-decoration: none;
 }
 footer .client .clients p a img {
- width: 50px;
- height: 50px;
+  width: 50px;
+  height: 50px;
 }
 footer .contact {
   padding: 20px;
@@ -499,17 +565,20 @@ footer h4 {
   color: white;
   padding: 20px;
 }
-footer  .fa{
+footer .fa {
   color: white;
   font-size: 20px;
   text-align: center;
 }
-footer .icon-last{
+footer .icon-last {
   padding: 1px 10px;
   text-align: left;
 }
 
 @media (max-width: 1024px) {
+  nav h2 {
+    display: none;
+   }
   .more-description {
     flex-direction: column;
     align-items: center;
@@ -530,24 +599,47 @@ footer .icon-last{
     text-transform: capitalize;
   }
 }
-@media (min-width:769px) {
-  nav{
+@media (min-width: 769px) {
+  nav {
     display: flex;
     /* flex-direction: row; */
   }
-  nav ul{
+  nav ul {
     visibility: visible;
     display: flex;
   }
 }
 @media (max-width: 768px) {
-  nav {
-    justify-content: space-between;
-  }
-  .burger {
+  .toggler{
     display: block;
-    cursor: pointer;
+}
+nav ul {
+    display: block;
+    justify-content: flex-end;
+    width: 100% ;
+    position: absolute;
+    left: 0;
+    top: 80px;
+    overflow: hidden;
+    display: none;
+    transition: all .5s ease in;
+    max-height: 320px;
+    background: white;
+  }
+  nav ul li ul {
+    position: absolute;
+    top: 35px;
+    display: block;
+    left: 50px;
+    background-color:blue;
+    color: white;
+    font-weight: 600;
+    width: 150px;
     z-index: 1;
+    visibility: hidden;
+  }
+  nav .logo h2{
+      display: none;
   }
 
   .wrapper {
@@ -563,12 +655,25 @@ footer .icon-last{
     display: none;
   }
   .who-we-are p {
+    text-align: left;
+    font-size: 16px;
     margin: 10px 20px;
+    color: #bcbcbc
+    
+    
   }
   .more-description {
     flex-direction: column;
     justify-content: center;
-    margin: auto;
+    margin: 40px 20px 10px;
+  }
+  .more-description .text {
+    color: #b3b3b3;
+    font-size: 17px;
+    text-align: left;
+  }
+  .boxmode-mom ul li:nth-of-type(2) {
+    display: none;
   }
 }
 @media (max-width: 992px) {
@@ -578,17 +683,39 @@ footer .icon-last{
     background-position: center;
     background-repeat: no-repeat;
     background: steel;
-    background-blend-mode:saturation;
+    background-blend-mode: saturation;
     background-size: cover;
-    animation: backchange 10s linear  infinite alternate;
+    animation: backchange 10s linear infinite alternate;
+    display: flex;
   }
+  nav a h2 {
+    text-decoration: none;
+    color: black;
+    display: none;
+}
+footer .contact .contactdiv input[type="email"] {
+  width: 150px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+}
 
   @keyframes backchange {
-    0%{background-image: url('../images/nano-images/4-18.jpg');}
-    25%{background-image: url('../images/nano-images/IMG_1378.JPG');}
-    50%{background-image: url('../images/nano-images/IMG_1383.JPG');}
-    75%{background-image: url('../images/nano-images/IMG_1384.JPG');}
-    100%{background-image: url('../images/nano-images/IMG_1380.JPG');}
+    0% {
+      background-image: url("../images/nano-images/4-18.jpg");
+    }
+    25% {
+      background-image: url("../images/nano-images/IMG_1378.JPG");
+    }
+    50% {
+      background-image: url("../images/nano-images/IMG_1383.JPG");
+    }
+    75% {
+      background-image: url("../images/nano-images/IMG_1384.JPG");
+    }
+    100% {
+      background-image: url("../images/nano-images/IMG_1380.JPG");
+    }
   }
   .videoman {
     position: absolute;
@@ -603,47 +730,18 @@ footer .icon-last{
     display: block;
     cursor: pointer;
   }
-  nav ul {
-    position: absolute;
-    display: block;
-    right:0;
-    top: 100px;
-    background-color: white;
-    width: 50%;
-    display: none;
-    height: 96vh;
-    /* transition: 2s linear; */
-
-  }
-  nav ul li {
-    display: block;
-  }
-  nav ul li ul {
-    z-index: 1;
-    width: 100%;
-  }
+  
   .wrapper p {
     font-size: 50px;
+    background: #ffffff5c;
+    box-shadow: 0px 0px 20px 300px #ffffff5c;
+    -webkit-text-stroke: 1px #0f1376;
   }
-  .nav-links  {
-    display: flex;
-    flex-direction: column;
-   position: absolute;
-   top: 72px;
-   right: 0;
-   background-color: white;
-   width: 50%;
-   height: 92vh;
-   transition: all 4s ease-in;
-   display: none;
+  .who-we-are h2,
+  .boxmode-mom ul li {
+    font-size: 3vw;
   }
-  .nav-links li a{
-    color: blue;
-  }
-  .burger {
-    display: block;
-  }
- 
+  
   .who-we-are {
     margin: 10px;
   }
@@ -656,23 +754,50 @@ footer .icon-last{
   }
 }
 @media (max-width: 480px) {
+  
   .wrapper button {
-    width: 251px;
+    /* width: 251px;
     height: 72px;
     left: 141px;
     top: 712px;
-    color: white;
+    color: white; */
     background: #040a99;
     border-radius: 44px;
-    padding-inline-end: 5px;
+    /* padding-inline-end: 10px; */
     border: none;
+    padding: 20px;
   
-    font-size: 20px;
-    text-transform: capitalize;
-    animation: button 4s ease-in infinite alternate;
+    font-size: 14px;
+    
   }
   .more-description img {
     width: 300px;
   }
 }
-
+@media (max-width:400px){
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+}
+.who-we-are p{
+  font-size: 10px;
+  line-height: 15px;
+}
+}
+@media (max-width:380px){
+.who-we-are img{
+  width: 20px;
+  height: 10px;
+}
+.more-description img{
+  width: 50vw;
+}
+.more-description .text {
+  width: 95%;
+  font-size: 10px;
+  color: #bcbcbc;
+  text-align: left;
+}
+}
