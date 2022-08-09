@@ -864,6 +864,12 @@ footer .icon-last {
   }
 }
 @media (max-width: 480px) {
+  .about-table table {
+    flex-basis: 100%;
+    /* border: 1px solid green; */
+    box-shadow: 0px 7px 48px 10px #0000000d;
+    /* width: 100%; */
+}
   .sell-form{
     width: 100%;
   }
