@@ -1,33 +1,25 @@
-// the navigation bar
-const toggler = document.querySelector(".toggler")
-const navLinks = document.querySelector(".navlinks")
-
-
-function navToggle() {
-    if (navLinks.style.display === "block") {
-      navLinks.style.display = "none";
-    } else {
-      navLinks.style.display = "block";
+const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    const enable = document.querySelector('.enable')
+    const showCase = document.getElementById('showcase')
+    menuBtn.onclick = ()=>{
+      navbar.classList.add("show");
+      menuBtn.classList.add("hide");
+      body.classList.add("disabled");
     }
-    console.log(navLinks);
-  }
-  
-  toggler.addEventListener('click',navToggle)
-
-let displayUs = document.getElementById("displaythem")
-let usDisplay = document.querySelector(".usdisplay")
-let display = document.querySelector("display")
-
-function show(){
-  if (usDisplay.style.display === "block") {
-    usDisplay.style.display = "none";
-    display.style.display ="none"
-    displayUs.textContent ="See All"
-  } else {
-    usDisplay.style.display = "block";
-    display.style.display ="none"
-    displayUs.textContent ="See Less"
-  }
-}
-
-displayUs.addEventListener("click",show)
+    cancelBtn.onclick = ()=>{
+      body.classList.remove("disabled");
+      navbar.classList.remove("show");
+      menuBtn.classList.remove("hide");
+    }
+    window.onscroll = ()=>{
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
+    showCase.onmouseover = ()=>{
+      enable.classList.add('displayed')
+    }
+    showCase.onmouseleave = ()=>{
+      enable.classList.remove('displayed')
+    }
