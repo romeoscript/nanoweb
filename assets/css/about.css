@@ -619,6 +619,79 @@ border: none;
   cursor: pointer;
   opacity: 0.8;
 }
+/* article-page css */
+
+.heading{
+  height: 80vh!important;
+  margin-top: 90px;
+  border: 1px solid;
+ 
+}
+.heading .article_header{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+}
+.heading .article_header main{
+  flex-basis:50% ;
+}
+.heading .article_header main img{
+  width: 100%;
+}
+.heading .article_header .article-img{
+  flex-basis: 60%;
+}
+.heading .article-content{
+  color: #131875;
+  text-transform: capitalize;
+}
+.heading .article-content h2{
+  margin: 40px 0 0 20px;
+  font-size: 40px;
+}
+.heading .article-content h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+  -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+@-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.heading .article-content span {
+  margin-right: 25px;
+}
+.heading .article-content span i{
+  margin-right: 5px;
+}
+.heading .article-content h1 span{
+  margin: 0;
+  font-size: 40px;
+}
+/* article-page-ends */
 footer {
   background-color: rgb(15, 19, 118);
 }
@@ -831,6 +904,29 @@ footer .icon-last {
     justify-content: center;
     margin: auto;
   }
+  .heading {
+    height: auto!important;
+    position: relative;
+}
+  .heading .article_header .article-content{
+    position: relative;
+    z-index: 10;
+  }
+  
+
+.heading .article_header {
+    display: block;
+}
+.heading .article_header .article-img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+}
+.heading .article-img img{
+  opacity: .5;
+}
 }
 @media (max-width: 992px) {
   header {
