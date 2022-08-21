@@ -624,7 +624,7 @@ border: none;
 .heading{
   height: 80vh!important;
   margin-top: 90px;
-  border: 1px solid;
+  /* border: 1px solid; */
  
 }
 .heading .article_header{
@@ -699,7 +699,25 @@ border: none;
 .blog__post .blog_post_item1 h3{
   color: #474A85;
   text-transform: capitalize;
-  margin-top: 40px;
+  margin-top: 20px;
+}
+.blog_post_item1 ul{
+  margin: 10px 0;
+  padding: 30px;
+  border-radius:10px ;
+  background: #DDE3FF40;
+
+}
+.blog_post_item1 ul li{
+  list-style-type: square;
+  margin: 15px;
+  color: #4A4FA9;
+  
+}
+.blog_post_item1 ul p{
+  margin: 15px;
+  color: #4A4FA9;
+  
 }
 .accordion {
   width: 100%;
@@ -740,22 +758,112 @@ border: none;
 .accordion-content header .title {
   font-size: 19px;
   font-weight: 500;
-  color: #333;
+  color: 
+#4A4FA9;
 }
 
 .accordion-content header i {
   font-size: 20px;
-  color: #333;
-}
+color: 
+#4A4FA9;}
 
 .accordion-content .description {
   height: 0;
+  
   background: #DDE3FF40;
 
-  color: #333;
+  color: #4A4FA9;
   font-weight: 400;
   padding: 0 15px;
   transition: all 0.2s linear;
+}
+.review_instruct{
+  display: flex;
+ justify-content: space-around;
+  padding: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5%;
+
+}
+.review__item{
+  flex-basis: 55%;
+}
+.review__item1{
+  flex-basis: 35%;
+}
+.review__item main{
+  margin: 5px;
+  padding: 10px;
+}
+.review__item main:nth-child(even){
+  background: #D6D6D6;
+}
+.review__item span i{
+  margin: 3px;
+  font-size: 15px;
+  color: orange;
+}
+.review__item h4{
+  color: #131875;
+
+}
+.review__item1 h4{
+  color: #131875;
+  margin-bottom: 10px;
+}
+.review__item p{
+  font-size: 11px;
+  color: #131875;
+
+}
+.instructor{
+  border-radius: 10px;
+  border: 1px solid green;
+   position: relative;
+  /* width: 70%; */
+}
+.ins__prof{
+  background: #294AD9;
+  height: 120px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+
+display: flex;
+align-items: flex-end;
+justify-content: center;
+color: white;
+padding: 10px;
+  margin: 0;
+
+}
+.teacher_icon i{
+  margin: 5px;
+  color: #0F1376;
+
+}
+.teacher_icon{
+  margin: 0!important;
+  padding: 10px;
+  text-align: center;
+background: rgba(41, 74, 217, 0.08);
+border-radius: 10px 10px 0px 0px;
+/* transform: matrix(1, 0, 0, -1, 0, 0); */
+
+}
+.ins__prof1{
+  padding: 45px 10px 10px;
+  color: #131875;
+
+}
+.instructor img{
+  position: absolute;
+  height: 90px;
+  top: 17%;
+  left: 4%;
+  width: 90px;
+  border-radius: 50%;
 }
 /* article-page-ends */
 footer {
@@ -992,6 +1100,15 @@ footer .icon-last {
 }
 .heading .article-img img{
   opacity: .5;
+}
+.blog__post{
+  display: grid;
+  grid-template-columns:  1fr;
+}
+.review_instruct{
+  display: grid;
+  grid-template-columns:  1fr;
+
 }
 }
 @media (max-width: 992px) {
