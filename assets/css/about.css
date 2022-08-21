@@ -691,6 +691,72 @@ border: none;
   margin: 0;
   font-size: 40px;
 }
+
+.blog__post{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.blog__post .blog_post_item1 h3{
+  color: #474A85;
+  text-transform: capitalize;
+  margin-top: 40px;
+}
+.accordion {
+  width: 100%;
+  background: #FFF;
+  margin: 0 15px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+.accordion .accordion-content {
+  margin: 10px 0;
+  border-radius: 4px;
+  background: #B8BFFA42;
+
+  /* border: 1px solid #FFD6B3; */
+  overflow: hidden;
+}
+
+.accordion-content.open {
+  padding-bottom: 10px;
+}
+
+.accordion-content header {
+  display: flex;
+  min-height: 50px;
+  padding: 0 15px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.2s linear;
+}
+
+.accordion-content.open header {
+  min-height: 35px;
+}
+
+.accordion-content header .title {
+  font-size: 19px;
+  font-weight: 500;
+  color: #333;
+}
+
+.accordion-content header i {
+  font-size: 20px;
+  color: #333;
+}
+
+.accordion-content .description {
+  height: 0;
+  background: #DDE3FF40;
+
+  color: #333;
+  font-weight: 400;
+  padding: 0 15px;
+  transition: all 0.2s linear;
+}
 /* article-page-ends */
 footer {
   background-color: rgb(15, 19, 118);
