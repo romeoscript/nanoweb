@@ -866,6 +866,114 @@ border-radius: 10px 10px 0px 0px;
   border-radius: 50%;
 }
 /* article-page-ends */
+/* gallery__page */
+.gallery__head{
+  margin: 90px 10px 10px;
+  padding: 20px;
+  
+}
+.gallery__head img{
+  width: 100%;
+}
+.gallery__link{
+  display: flex;
+  gap: 2%;
+  justify-content: space-around;
+  padding: 0 30px;
+}
+.gallery__link a{
+  text-decoration: unset;
+flex-basis: 48%;
+/* border: 2px solid green; */
+text-align: center;
+padding: 20px;
+border-radius: 10px;
+color: #04085B;
+background: #1E34FF42;
+
+}
+.gallery__link a:hover{
+  background: #1E34FF1F;
+
+}
+.gallery__grid{
+  display: grid;
+  gap: 2%;
+  padding: 10px;
+  width: 100%;
+  height: auto;
+  border: 1px solid green;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+  margin: 20px auto;
+}
+.gallery__grid_img{
+  position: relative;
+}
+
+.gallery__info{
+  position: absolute;
+  padding:10px;
+  bottom: 0;
+  width: 100%;
+  height:50%;
+  background: linear-gradient(180.41deg, rgba(111, 64, 64, 0) 8.9%, #390000 99.64%);
+  /* opacity: .8; */
+  color: white;
+  padding: 10px;
+  transform: scale(0.1);
+ visibility: hidden;
+ border-radius: 10px;
+ overflow: hidden;
+ transition: transform 0.5s ease-in ;
+}
+.gallery__info h3{
+  font-size: 90%;
+}
+.gallery__info p{
+  font-size: 90%!important;
+}
+.gallery__grid_img:hover .gallery__info{
+  cursor:pointer;
+  transform: scale(1);
+  visibility: visible;
+}
+.gallery__grid-imgholder{
+  border: 2px solid blue;
+  width: 90%;
+  margin: 30px 10px;
+  position: relative;
+  height: 300px;
+}
+.gallery__grid-imgholder img{
+  width: 100%;
+ height: 100%;
+}
+.descriptive__info{
+position: absolute;
+top: -10%;
+bottom: -10%;
+height: auto;
+border-radius: 10px;
+background-color: white;
+padding: 20px;
+border: 1px solid green;
+min-height: 200px;
+left: 0;
+right: 0;
+transform: scale(0.1);
+z-index: 2;
+transition: transform 0.5s ease-in ;
+visibility: hidden;
+  /* display: none; */
+}
+.file{
+  
+  transform: scale(1);
+  visibility: visible;
+  /* display: block!important; */
+}
+/* gallery__page__end */
 footer {
   background-color: rgb(15, 19, 118);
 }
@@ -1006,7 +1114,11 @@ footer .icon-last {
   .toggler {
     display: block;
   }
+  .gallery__grid{
 
+    grid-template-columns:  1fr 1fr;
+    
+  }
   main .sec1 .grid {
     grid-template-columns: minmax(200px, 1fr);
     margin: 0 1em;
