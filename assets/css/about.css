@@ -953,6 +953,7 @@ background: #1E34FF42;
 position: absolute;
 top: -10%;
 bottom: -10%;
+overflow-y: scroll;
 height: auto;
 border-radius: 10px;
 background-color: white;
@@ -972,6 +973,21 @@ visibility: hidden;
   transform: scale(1);
   visibility: visible;
   /* display: block!important; */
+}
+.gallery__profile{
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 20px;
+}
+.gallery__clearfix{
+  height: 40px;
+}
+.gallery__profile img{
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  display: block;
 }
 /* gallery__page__end */
 footer {
