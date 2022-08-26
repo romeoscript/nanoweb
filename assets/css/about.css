@@ -953,11 +953,12 @@ background: #1E34FF42;
 position: absolute;
 top: -10%;
 bottom: -10%;
+overflow-x: hidden;
 overflow-y: scroll;
 height: auto;
 border-radius: 10px;
 background-color: white;
-padding: 20px;
+/* padding: 20px; */
 border: 1px solid green;
 min-height: 200px;
 left: 0;
@@ -968,6 +969,9 @@ transition: transform 0.5s ease-in ;
 visibility: hidden;
   /* display: none; */
 }
+.descriptive__info>p{
+  padding: 10px;
+}
 .file{
   
   transform: scale(1);
@@ -977,11 +981,20 @@ visibility: hidden;
 .gallery__profile{
   display: flex;
   position: absolute;
+  justify-content: space-around;
   bottom: 0;
+  width: 100%;
+  background-color: #0000000d;
+  padding-top: 10px;
   padding-bottom: 20px;
 }
 .gallery__clearfix{
   height: 40px;
+}
+.gallery__profile a{
+  color: black;
+  text-decoration: unset;
+  margin: 2px;
 }
 .gallery__profile img{
   height: 60px;
