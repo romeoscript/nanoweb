@@ -1,3 +1,4 @@
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -909,6 +910,7 @@ background: #1E34FF42;
 }
 .gallery__grid_img{
   position: relative;
+  height: 250px;
 }
 
 .gallery__info{
@@ -943,7 +945,7 @@ background: #1E34FF42;
   width: 90%;
   margin: 30px 10px;
   position: relative;
-  height: 300px;
+  /* height: 250px; */
 }
 .gallery__grid-imgholder img{
   width: 100%;
@@ -976,6 +978,7 @@ visibility: hidden;
 }
 .descriptive__info>p{
   padding: 10px;
+  font-size: 90%;
 }
 .file{
   
@@ -985,7 +988,7 @@ visibility: hidden;
 }
 .gallery__profile{
   display: flex;
-  position: absolute;
+  position: relative;
   justify-content: space-around;
   bottom: 0;
   width: 100%;
@@ -1000,6 +1003,7 @@ visibility: hidden;
   height: 40px;
 }
 .gallery__profile a{
+  font-size: 10px;
   color: black;
   text-decoration: unset;
   margin: 2px;
@@ -1011,6 +1015,18 @@ visibility: hidden;
   display: block;
   position: relative;
   top: 5%;
+}
+.times2{
+  /* width: 30px; */
+  cursor: pointer;
+  color: grey;
+}
+.gallery__info .see{
+  text-align: right;
+  display: block;
+}
+.see::after{
+  content: "\f0da";
 }
 /* gallery__page__end */
 footer {
@@ -1148,8 +1164,23 @@ footer .icon-last {
     text-transform: capitalize;
   }
 }
-
+@media (max-width:900px){
+  .gallery__info{
+ 
+    height:100%;
+   
+  }
+}
 @media (max-width: 768px) {
+
+.gallery__info p{
+  padding: 5px;
+  font-size: 60%!important;
+}
+.gallery__info h3{
+
+  font-size: 70%;
+}
   .toggler {
     display: block;
   }
@@ -1294,11 +1325,49 @@ footer .icon-last {
   }
 }
 @media (max-width: 480px) {
+  .gallery__grid-imgholder{
+  /* border: 2px solid blue; */
+  width: 90%;
+  margin: 30px 10px;
+  position: static;
+  /* height: 250px; */
+}
+
+  /* .descriptive__info>p {
+    padding: 10px;
+    font-size: 70%;
+} */
+.descriptive__info div:first-child {
+  padding-top: 5px;
+  font-size: 70%;
+}
+.gallery__profile img {
+  height: 40px;
+  width: 40px;
+ 
+}
+  /* .gallery__profile-info h2{
+    font-size: 60%;
+      }
+  .gallery__profile-info p{
+font-size: 50%;
+  } */
+  .gallery__grid_img{
+    position: relative;
+    height: 120px;
+  }
   .about-table table {
     flex-basis: 100%;
     /* border: 1px solid green; */
     box-shadow: 0px 7px 48px 10px #0000000d;
     /* width: 100%; */
+}
+
+
+.descriptive__info {
+   position: fixed;
+    top: 10%;
+   
 }
   .sell-form{
     width: 100%;
