@@ -44,3 +44,12 @@ del.forEach((deleted) => {
     });
   });
 });
+ let hidden = document.getElementById('hidden')
+ let textArea = document.getElementById('description_text')
+
+ textArea.addEventListener('change',()=>{
+  let textValue = textArea.value;
+  let filtered = textValue.substring(0, 100);
+  hidden.value = filtered;
+  console.log(hidden.value)
+ })

@@ -143,14 +143,24 @@
               style="display: none; visibility: hidden"
             />
             <label for="">Title</label>
-            <input type="hidden" name="" maxlength="100" id="hidden" /> <br />
-            <input type="text" placeholder="Post title" /><br />
+            <input
+              type="hidden"
+              name=""
+              maxlength="100"
+              id="hidden"
+              value=""
+              required
+            />
+            <br />
+            <input type="text" placeholder="Post title" value="" required/><br />
             <textarea
               name=""
               id="description_text"
               cols="30"
               placeholder="create-post"
               rows="10"
+              value=""
+              required
             ></textarea
             ><br />
             <button>Post</button>
@@ -164,6 +174,8 @@
               cols="30"
               placeholder="Write Review"
               rows="10"
+              value=""
+              required
             ></textarea
             ><br />
             <button>Post Review</button>
