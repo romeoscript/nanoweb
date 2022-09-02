@@ -329,3 +329,19 @@ code {
   border-left: 3vw solid #ccc;
   border-bottom: 2vw solid transparent;
 }
+
+
+
+.review__story{
+  text-align: center;
+}
+.review__story button{
+background: var(--dark-blue);
+padding: 15px 30px;
+color: white;
+text-transform: uppercase;
+border: none;
+margin: 10px;
+border-radius: 10px;
+cursor: pointer;
+}
