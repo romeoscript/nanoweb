@@ -53,34 +53,34 @@ code {
   border-top: 0.5vw solid;
   border-left: 0.5vw solid transparent;
   border-right: 0.5vw solid transparent;
-  margin:5px;
+  margin: 5px;
   transform-origin: top;
   transition: all 0.15s ease-out;
 }
 
-.right .dropdown{
-  cursor:pointer;  
-  position:relative;
+.right .dropdown {
+  cursor: pointer;
+  position: relative;
 }
 
 .dropdown .menu {
-  position:absolute;
-  width:11vw;
-  background:var(--dark-blue);
-  right:-0.5vw;
-  top:1vw;
-  display:none;
-  flex-direction:column;
-  align-items:center;
-  gap:1vw;
-  color:white;
+  position: absolute;
+  width: 11vw;
+  background: var(--dark-blue);
+  right: -0.5vw;
+  top: 1vw;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 1vw;
+  color: white;
   font-size: 1.3vw;
-  padding:2.3vw 0 1vw;
+  padding: 2.3vw 0 1vw;
   transition: all 25s ease-out;
   text-transform: none;
 }
-.menu a:hover{
-  font-size:1.2em;
+.menu a:hover {
+  font-size: 1.2em;
 }
 
 .section {
@@ -258,7 +258,6 @@ code {
   position: unset;
 }
 .course h3:before {
- 
   color: #999;
 }
 .course .watched h3::before {
@@ -330,43 +329,84 @@ code {
   border-bottom: 2vw solid transparent;
 }
 
-#preview{
+#preview {
   border: 3px dotted grey;
   width: 250px;
   height: 180px;
   margin: auto;
 }
-@media(max-width:480px){
-  #preview{
+@media (max-width: 480px) {
+  #preview {
     border: 3px dotted grey;
     width: 100%;
-   
   }
-  
 }
-.review__story{
+.review__story {
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-.review__story form{
+.review__story form {
   width: 50%;
-  border: 1px solid  green;
+  /* border: 1px solid  green; */
 }
-.review__story input, .review__story textarea{
+.review__story input,
+.review__story textarea {
   width: 100%;
   padding: 10px;
   margin: 10px 0;
 }
-.review__story button{
-background: var(--dark-blue);
-padding: 15px 30px;
-color: white;
-text-transform: uppercase;
-border: none;
-margin: 10px;
-border-radius: 10px;
-cursor: pointer;
+.review__story button {
+  background: var(--dark-blue);
+  padding: 15px 30px;
+  color: white;
+  text-transform: uppercase;
+  border: none;
+  margin: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+ 
+}
+.review_post {
+  display: none;
+  visibility: hidden;
+  -webkit-box-shadow: 0px -19px 80px 19px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px -19px 80px 19px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px -19px 80px 19px rgba(0, 0, 0, 0.75);
+  padding: 20px;
+  margin: 20px;
+  -webkit-animation: rotate-center 0.6s ease-in-out both;
+  animation: rotate-center 0.6s ease-in-out both;
+}
+@-webkit-keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.review_item {
+  display: block;
+  visibility: visible;
+  position: fixed;
+  top: 10%;
+  z-index: 99;
+  background-color: white;
+ 
 }

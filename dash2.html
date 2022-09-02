@@ -117,7 +117,7 @@
             <button id="b1" class="review_btn">Add Story</button
             ><button id="b2" class="review_btn">Review</button>
           </div>
-          <form action="">
+          <form action="" id="b1" class="review_post">
             <label for="upload_file"><div id="preview">Add image</div></label>
 
             <input
@@ -131,9 +131,14 @@
             />
             <label for="">Title</label> 
             <input type="hidden" name="" maxlength="100" id="hidden" > <br>
-            <input type="text" /><br>
-            <textarea name="" id="description_text" cols="30" rows="10"></textarea><br>
+            <input type="text" placeholder="Post title" /><br>
+            <textarea name="" id="description_text" cols="30" placeholder="create-post" rows="10"></textarea><br>
             <button>Post</button>
+          </form>
+          <form action="" id="b2" class="review_post">
+            <label for="">Write Review</label> 
+            <textarea name="" id="description_text" cols="30" placeholder="Write Review" rows="10"></textarea><br>
+            <button>Post Review</button>
           </form>
         </section>
         <div class="course">
@@ -191,17 +196,7 @@
       </div>
     </div>
 
-    <script>
-      function getImagePreview(event) {
-        var image = URL.createObjectURL(event.target.files[0]);
-        var imagediv = document.getElementById("preview");
-        var newimg = document.createElement("img");
-        imagediv.innerHTML = "";
-        newimg.src = image;
-        newimg.width = "250";
-        imagediv.appendChild(newimg);
-      }
-    </script>
+    
 
     <script src="./assets/js/script.js"></script>
   </body>
