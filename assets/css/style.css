@@ -335,12 +335,7 @@ code {
   height: 180px;
   margin: auto;
 }
-@media (max-width: 480px) {
-  #preview {
-    border: 3px dotted grey;
-    width: 100%;
-  }
-}
+
 .review__story {
   text-align: center;
   display: flex;
@@ -367,7 +362,6 @@ code {
   margin: 10px;
   border-radius: 10px;
   cursor: pointer;
- 
 }
 .review_post {
   display: none;
@@ -383,21 +377,21 @@ code {
 @-webkit-keyframes rotate-center {
   0% {
     -webkit-transform: rotate(0);
-            transform: rotate(0);
+    transform: rotate(0);
   }
   100% {
     -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 @keyframes rotate-center {
   0% {
     -webkit-transform: rotate(0);
-            transform: rotate(0);
+    transform: rotate(0);
   }
   100% {
     -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
@@ -408,10 +402,19 @@ code {
   top: 10%;
   z-index: 99;
   background-color: white;
- 
 }
-.del{
+.del {
   cursor: pointer;
   font-size: 20px;
   color: grey;
+}
+@media (max-width: 480px) {
+  #preview {
+    border: 3px dotted grey;
+    width: 100%;
+  }
+  .review__story form {
+    width: 90%;
+    /* border: 1px solid green; */
+  }
 }
