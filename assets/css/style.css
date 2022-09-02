@@ -330,10 +330,35 @@ code {
   border-bottom: 2vw solid transparent;
 }
 
-
-
+#preview{
+  border: 3px dotted grey;
+  width: 250px;
+  height: 180px;
+  margin: auto;
+}
+@media(max-width:480px){
+  #preview{
+    border: 3px dotted grey;
+    width: 100%;
+   
+  }
+  
+}
 .review__story{
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.review__story form{
+  width: 50%;
+  border: 1px solid  green;
+}
+.review__story input, .review__story textarea{
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
 }
 .review__story button{
 background: var(--dark-blue);

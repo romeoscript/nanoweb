@@ -14,7 +14,6 @@
 
     <title>React App</title>
     <link href="./assets/css/style.css" rel="stylesheet" />
-
   </head>
   <body>
     <div id="root">
@@ -114,11 +113,13 @@
           </div>
         </section>
         <section class="review__story">
-          <button id="b1" class="review_btn">Add Story</button
-          ><button id="b2" class="review_btn">Review</button>
+          <div>
+            <button id="b1" class="review_btn">Add Story</button
+            ><button id="b2" class="review_btn">Review</button>
+          </div>
           <form action="">
-            <label for="image">select Image</label>
-            <div id="preview"></div>
+            <label for="upload_file"><div id="preview">Add image</div></label>
+
             <input
               type="file"
               name="upload_file"
@@ -126,9 +127,13 @@
               placeholder="Enter Name"
               id="upload_file"
               onchange="getImagePreview(event)"
+              style="display: none; visibility: hidden"
             />
-
-        
+            <label for="">Title</label> 
+            <input type="hidden" name="" maxlength="100" id="hidden" > <br>
+            <input type="text" /><br>
+            <textarea name="" id="description_text" cols="30" rows="10"></textarea><br>
+            <button>Post</button>
           </form>
         </section>
         <div class="course">
@@ -185,8 +190,7 @@
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-    <script src="./script.js"></script>
+
     <script>
       function getImagePreview(event) {
         var image = URL.createObjectURL(event.target.files[0]);
@@ -194,12 +198,11 @@
         var newimg = document.createElement("img");
         imagediv.innerHTML = "";
         newimg.src = image;
-        newimg.width = "300";
+        newimg.width = "250";
         imagediv.appendChild(newimg);
       }
     </script>
-=======
-      <script src="./assets/js/script.js"></script>
->>>>>>> 07a5ba207eeb29770328dca3fcaf445c04c61d11
+
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>
