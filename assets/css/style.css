@@ -410,3 +410,8 @@ code {
   background-color: white;
  
 }
+.del{
+  cursor: pointer;
+  font-size: 20px;
+  color: grey;
+}

@@ -11,6 +11,13 @@
     />
     <link rel="apple-touch-icon" href="/logo192.png" />
     <link rel="manifest" href="/manifest.json" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <title>React App</title>
     <link href="./assets/css/style.css" rel="stylesheet" />
@@ -117,7 +124,13 @@
             <button id="b1" class="review_btn">Add Story</button
             ><button id="b2" class="review_btn">Review</button>
           </div>
-          <form action="" id="b1" class="review_post">
+          <form
+            action=""
+            id="b1"
+            class="review_post"
+            enctype="multipart/form-data"
+          >
+            <i class="fa fa-times del" aria-hidden="true"></i>
             <label for="upload_file"><div id="preview">Add image</div></label>
 
             <input
@@ -129,15 +142,30 @@
               onchange="getImagePreview(event)"
               style="display: none; visibility: hidden"
             />
-            <label for="">Title</label> 
-            <input type="hidden" name="" maxlength="100" id="hidden" > <br>
-            <input type="text" placeholder="Post title" /><br>
-            <textarea name="" id="description_text" cols="30" placeholder="create-post" rows="10"></textarea><br>
+            <label for="">Title</label>
+            <input type="hidden" name="" maxlength="100" id="hidden" /> <br />
+            <input type="text" placeholder="Post title" /><br />
+            <textarea
+              name=""
+              id="description_text"
+              cols="30"
+              placeholder="create-post"
+              rows="10"
+            ></textarea
+            ><br />
             <button>Post</button>
           </form>
           <form action="" id="b2" class="review_post">
-            <label for="">Write Review</label> 
-            <textarea name="" id="description_text" cols="30" placeholder="Write Review" rows="10"></textarea><br>
+            <i class="fa fa-times del" aria-hidden="true"></i>
+            <label for="">Write Review</label>
+            <textarea
+              name=""
+              id="description_text"
+              cols="30"
+              placeholder="Write Review"
+              rows="10"
+            ></textarea
+            ><br />
             <button>Post Review</button>
           </form>
         </section>
@@ -195,8 +223,6 @@
         </div>
       </div>
     </div>
-
-    
 
     <script src="./assets/js/script.js"></script>
   </body>
