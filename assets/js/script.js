@@ -45,8 +45,8 @@ del.forEach((deleted) => {
   });
 });
  let hidden = document.getElementById('hidden')
- let textArea = document.getElementById('description_text')
-
+ let textArea = document.querySelector('.description_text')
+ console.log(textArea)
  textArea.addEventListener('change',()=>{
   let textValue = textArea.value;
   let filtered = textValue.substring(0, 100);
